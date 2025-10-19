@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConUni_Soap_Dotnet_GR06", "ConUni_Soap_Dotnet_GR06\ConUni_Soap_Dotnet_GR06.csproj", "{E075BFD4-9CAE-46BE-8A55-CCEEF098C3E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConUni_Client_Console_DotNet", "ConUni_Client_Console_DotNet\ConUni_Client_Console_DotNet.csproj", "{1AE8B1E0-D442-491B-9229-1EDA8A8AA7B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E075BFD4-9CAE-46BE-8A55-CCEEF098C3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E075BFD4-9CAE-46BE-8A55-CCEEF098C3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E075BFD4-9CAE-46BE-8A55-CCEEF098C3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E075BFD4-9CAE-46BE-8A55-CCEEF098C3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE8B1E0-D442-491B-9229-1EDA8A8AA7B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE8B1E0-D442-491B-9229-1EDA8A8AA7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE8B1E0-D442-491B-9229-1EDA8A8AA7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE8B1E0-D442-491B-9229-1EDA8A8AA7B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9972B8DB-CFEA-464D-B2C7-9A212A2954D8}
+		SolutionGuid = {BDEC4F0D-3B34-46E0-8A02-D23681BF02E2}
 	EndGlobalSection
 EndGlobal
