@@ -7,7 +7,7 @@ package ec.edu.monster.pruebas;
 import ec.edu.monster.services.ConversorTemperatura;
 import ec.edu.monster.services.ConversorLongitud;
 import ec.edu.monster.services.ConversorMasa;
-import ec.edu.monster.modelo.AutenticacionService;
+import ec.edu.monster.services.AutenticacionService;
 import ec.edu.monster.modelo.Usuario;
 /**
  *

@@ -4,8 +4,8 @@
  */
 package ec.edu.monster.ws;
 
-import ec.edu.monster.modelo.AutenticacionService;
-import ec.edu.monster.services.RespuestaAutenticacion;
+import ec.edu.monster.services.AutenticacionService;
+import ec.edu.monster.modelo.RespuestaAutenticacion;
 import ec.edu.monster.modelo.Usuario;
 import ec.edu.monster.services.ConversorTemperatura;
 import ec.edu.monster.services.ConversorLongitud;
