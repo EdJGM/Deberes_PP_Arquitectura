@@ -1,6 +1,0 @@
-@ConUni_RestFul_Dotnet_GR06_HostAddress = http://localhost:5174
-
-GET {{ConUni_RestFul_Dotnet_GR06_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
