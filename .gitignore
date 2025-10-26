@@ -110,6 +110,7 @@ __MACOSX/
 
 # ====== NETBEANS ======
 nbproject/private/
+**/nbproject/private/
 nbbuild/
 nbdist/
 .nb-gradle/
