@@ -4,7 +4,8 @@
  */
 package ec.edu.monster.vistas;
 
-import ec.edu.monster.service.Cliente;
+import ec.edu.monster.ws.client.ConversorUnidadesWS;
+import ec.edu.monster.ws.client.ConversorUnidadesWS_Service;
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,7 +16,7 @@ import java.awt.*;
 public class PanelTemperaturaFrame extends JFrame {
     
     private String usuario;
-    private Cliente servicio;
+    private ConversorUnidadesWS servicio;
     
     private JTextField txtValor;
     private JComboBox<String> cmbOrigen;
@@ -24,7 +25,20 @@ public class PanelTemperaturaFrame extends JFrame {
     
     public PanelTemperaturaFrame(String usuario) {
         this.usuario = usuario;
+        initService();
         initComponents();
+    }
+    
+    private void initService() {
+        try {
+            ConversorUnidadesWS_Service service = new ConversorUnidadesWS_Service();
+            servicio = service.getConversorUnidadesWSPort();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                "Error al conectar con el servidor: " + e.getMessage(),
+                "Error de Conexión",
+                JOptionPane.ERROR_MESSAGE);
+        }
     }
     
     private void initComponents() {
@@ -169,21 +183,21 @@ public class PanelTemperaturaFrame extends JFrame {
             
             // Celsius a...
             if (origen.equals("Celsius") && destino.equals("Fahrenheit")) {
-                resultado = servicio.CelsiusAFahrenheit(valor);
+                resultado = servicio.celsiusAFahrenheit(valor);
             } else if (origen.equals("Celsius") && destino.equals("Kelvin")) {
-                resultado = servicio.CelsiusAKelvin(valor);
+                resultado = servicio.celsiusAKelvin(valor);
             }
             // Fahrenheit a...
             else if (origen.equals("Fahrenheit") && destino.equals("Celsius")) {
-                resultado = servicio.FahrenheitACelsius(valor);
+                resultado = servicio.fahrenheitACelsius(valor);
             } else if (origen.equals("Fahrenheit") && destino.equals("Kelvin")) {
-                resultado = servicio.FahrenheitAKelvin(valor);
+                resultado = servicio.fahrenheitAKelvin(valor);
             }
             // Kelvin a...
             else if (origen.equals("Kelvin") && destino.equals("Celsius")) {
-                resultado = servicio.KelvinACelsius(valor);
+                resultado = servicio.kelvinACelsius(valor);
             } else if (origen.equals("Kelvin") && destino.equals("Fahrenheit")) {
-                resultado = servicio.KelvinAFahrenheit(valor);
+                resultado = servicio.kelvinAFahrenheit(valor);
             }
             
             lblResultado.setText("Resultado: " + String.format("%.2f", resultado) + " " + destino);

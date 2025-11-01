@@ -4,7 +4,8 @@
  */
 package ec.edu.monster.vistas;
 
-import ec.edu.monster.service.Cliente;
+import ec.edu.monster.ws.client.ConversorUnidadesWS;
+import ec.edu.monster.ws.client.ConversorUnidadesWS_Service;
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,7 +16,7 @@ import java.awt.*;
 public class PanelLongitudFrame extends JFrame {
     
     private String usuario;
-    private Cliente servicio;
+    private ConversorUnidadesWS servicio;
     
     private JTextField txtValor;
     private JComboBox<String> cmbOrigen;
@@ -24,7 +25,20 @@ public class PanelLongitudFrame extends JFrame {
     
     public PanelLongitudFrame(String usuario) {
         this.usuario = usuario;
+        initService();
         initComponents();
+    }
+    
+    private void initService() {
+        try {
+            ConversorUnidadesWS_Service service = new ConversorUnidadesWS_Service();
+            servicio = service.getConversorUnidadesWSPort();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                "Error al conectar con el servidor: " + e.getMessage(),
+                "Error de Conexión",
+                JOptionPane.ERROR_MESSAGE);
+        }
     }
     
     private void initComponents() {
@@ -169,21 +183,21 @@ public class PanelLongitudFrame extends JFrame {
             
             // Metro a...
             if (origen.equals("Metro") && destino.equals("Kilómetro")) {
-                resultado = servicio.MetroAKilometro(valor);
+                resultado = servicio.metroAKilometro(valor);
             } else if (origen.equals("Metro") && destino.equals("Milla")) {
-                resultado = servicio.MetroAMilla(valor);
+                resultado = servicio.metroAMilla(valor);
             }
             // Kilómetro a...
             else if (origen.equals("Kilómetro") && destino.equals("Metro")) {
-                resultado = servicio.KilometroAMetro(valor);
+                resultado = servicio.kilometroAMetro(valor);
             } else if (origen.equals("Kilómetro") && destino.equals("Milla")) {
-                resultado = servicio.KilometroAMilla(valor);
+                resultado = servicio.kilometroAMilla(valor);
             }
             // Milla a...
             else if (origen.equals("Milla") && destino.equals("Metro")) {
-                resultado = servicio.MillaAMetro(valor);
+                resultado = servicio.millaAMetro(valor);
             } else if (origen.equals("Milla") && destino.equals("Kilómetro")) {
-                resultado = servicio.MillaAKilometro(valor);
+                resultado = servicio.millaAKilometro(valor);
             }
             
             lblResultado.setText("Resultado: " + String.format("%.4f", resultado) + " " + destino);

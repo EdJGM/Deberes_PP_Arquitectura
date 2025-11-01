@@ -4,7 +4,8 @@
  */
 package ec.edu.monster.vistas;
 
-import ec.edu.monster.service.Cliente;
+import ec.edu.monster.ws.client.ConversorUnidadesWS;
+import ec.edu.monster.ws.client.ConversorUnidadesWS_Service;
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,7 +16,7 @@ import java.awt.*;
 public class PanelMasaFrame extends JFrame {
     
     private String usuario;
-    private Cliente servicio;
+    private ConversorUnidadesWS servicio;
     
     private JTextField txtValor;
     private JComboBox<String> cmbOrigen;
@@ -24,7 +25,20 @@ public class PanelMasaFrame extends JFrame {
     
     public PanelMasaFrame(String usuario) {
         this.usuario = usuario;
+        initService();
         initComponents();
+    }
+    
+    private void initService() {
+        try {
+            ConversorUnidadesWS_Service service = new ConversorUnidadesWS_Service();
+            servicio = service.getConversorUnidadesWSPort();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                "Error al conectar con el servidor: " + e.getMessage(),
+                "Error de Conexión",
+                JOptionPane.ERROR_MESSAGE);
+        }
     }
     
     private void initComponents() {
@@ -169,21 +183,21 @@ public class PanelMasaFrame extends JFrame {
             
             // Kilogramo a...
             if (origen.equals("Kilogramo") && destino.equals("Gramo")) {
-                resultado = servicio.KilogramoAGramo(valor);
+                resultado = servicio.kilogramoAGramo(valor);
             } else if (origen.equals("Kilogramo") && destino.equals("Libra")) {
-                resultado = servicio.KilogramoALibra(valor);
+                resultado = servicio.kilogramoALibra(valor);
             }
             // Gramo a...
             else if (origen.equals("Gramo") && destino.equals("Kilogramo")) {
-                resultado = servicio.GramoAKilogramo(valor);
+                resultado = servicio.gramoAKilogramo(valor);
             } else if (origen.equals("Gramo") && destino.equals("Libra")) {
-                resultado = servicio.GramoALibra(valor);
+                resultado = servicio.gramoALibra(valor);
             }
             // Libra a...
             else if (origen.equals("Libra") && destino.equals("Kilogramo")) {
-                resultado = servicio.LibraAKilogramo(valor);
+                resultado = servicio.libraAKilogramo(valor);
             } else if (origen.equals("Libra") && destino.equals("Gramo")) {
-                resultado = servicio.LibraAGramo(valor);
+                resultado = servicio.libraAGramo(valor);
             }
             
             lblResultado.setText("Resultado: " + String.format("%.4f", resultado) + " " + destino);
