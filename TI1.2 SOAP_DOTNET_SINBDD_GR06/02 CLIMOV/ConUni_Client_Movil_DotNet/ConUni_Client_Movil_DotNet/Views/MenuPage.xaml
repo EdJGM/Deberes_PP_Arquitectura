@@ -168,29 +168,6 @@
                 </Grid>
             </Frame>
 
-            <!-- Info adicional -->
-            <Frame CornerRadius="15"
-                   Padding="15"
-                   BackgroundColor="#0f172a"
-                   BorderColor="#1e293b"
-                   Margin="0,10,0,20">
-                <VerticalStackLayout Spacing="8">
-                    <Label Text="ℹ️ Información"
-                           TextColor="#94a3b8"
-                           FontSize="14"
-                           FontAttributes="Bold"/>
-                    <Label Text="• 18 conversiones disponibles"
-                           TextColor="#cbd5e1"
-                           FontSize="12"/>
-                    <Label Text="• Resultados precisos en tiempo real"
-                           TextColor="#cbd5e1"
-                           FontSize="12"/>
-                    <Label Text="• Interfaz intuitiva y fácil de usar"
-                           TextColor="#cbd5e1"
-                           FontSize="12"/>
-                </VerticalStackLayout>
-            </Frame>
-            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -164,31 +164,7 @@
                            HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
             </Frame>
-
-            <!-- Info de fórmulas -->
-            <Frame CornerRadius="15"
-                   Padding="15"
-                   BackgroundColor="#0f172a"
-                   BorderColor="#1e293b">
-                <VerticalStackLayout Spacing="8">
-                    <Label Text="📝 Fórmulas de conversión"
-                           TextColor="#94a3b8"
-                           FontSize="14"
-                           FontAttributes="Bold"/>
-                    <Label Text="• g = kg × 1000"
-                           TextColor="#cbd5e1"
-                           FontSize="11"
-                           FontFamily="Monospace"/>
-                    <Label Text="• lb = kg × 2.20462"
-                           TextColor="#cbd5e1"
-                           FontSize="11"
-                           FontFamily="Monospace"/>
-                    <Label Text="• g = lb × 453.592"
-                           TextColor="#cbd5e1"
-                           FontSize="11"
-                           FontFamily="Monospace"/>
-                </VerticalStackLayout>
-            </Frame>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

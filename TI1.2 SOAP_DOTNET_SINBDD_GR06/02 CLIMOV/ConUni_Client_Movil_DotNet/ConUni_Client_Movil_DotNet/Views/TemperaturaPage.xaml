@@ -165,30 +165,6 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Info de fórmulas -->
-            <Frame CornerRadius="15"
-                   Padding="15"
-                   BackgroundColor="#0f172a"
-                   BorderColor="#1e293b">
-                <VerticalStackLayout Spacing="8">
-                    <Label Text="📝 Fórmulas de conversión"
-                           TextColor="#94a3b8"
-                           FontSize="14"
-                           FontAttributes="Bold"/>
-                    <Label Text="• °F = (°C × 9/5) + 32"
-                           TextColor="#cbd5e1"
-                           FontSize="11"
-                           FontFamily="Monospace"/>
-                    <Label Text="• K = °C + 273.15"
-                           TextColor="#cbd5e1"
-                           FontSize="11"
-                           FontFamily="Monospace"/>
-                    <Label Text="• °F = (K - 273.15) × 9/5 + 32"
-                           TextColor="#cbd5e1"
-                           FontSize="11"
-                           FontFamily="Monospace"/>
-                </VerticalStackLayout>
-            </Frame>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
