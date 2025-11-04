@@ -4,12 +4,12 @@ namespace ConUni_Client_Movil_DotNet.Views;
 
 public partial class MasaPage : ContentPage
 {
-    private readonly ConversorService _conversorService;
+    private readonly ServiceManager _serviceManager;
 
-    public MasaPage(ConversorService conversorService)
+    public MasaPage(ServiceManager serviceManager)
     {
         InitializeComponent();
-        _conversorService = conversorService;
+        _serviceManager = serviceManager;
 
         PickerOrigen.SelectedIndex = 0;  // Kilogramo
         PickerDestino.SelectedIndex = 1; // Gramo
@@ -74,21 +74,21 @@ public partial class MasaPage : ContentPage
 
         // Desde Kilogramo
         if (origen == 0 && destino == 1) // Kilogramo → Gramo
-            return await _conversorService.KilogramoAGramoAsync(valor);
+            return await _serviceManager.KilogramoAGramoAsync(valor);
         if (origen == 0 && destino == 2) // Kilogramo → Libra
-            return await _conversorService.KilogramoALibraAsync(valor);
+            return await _serviceManager.KilogramoALibraAsync(valor);
 
         // Desde Gramo
         if (origen == 1 && destino == 0) // Gramo → Kilogramo
-            return await _conversorService.GramoAKilogramoAsync(valor);
+            return await _serviceManager.GramoAKilogramoAsync(valor);
         if (origen == 1 && destino == 2) // Gramo → Libra
-            return await _conversorService.GramoALibraAsync(valor);
+            return await _serviceManager.GramoALibraAsync(valor);
 
         // Desde Libra
         if (origen == 2 && destino == 0) // Libra → Kilogramo
-            return await _conversorService.LibraAKilogramoAsync(valor);
+            return await _serviceManager.LibraAKilogramoAsync(valor);
         if (origen == 2 && destino == 1) // Libra → Gramo
-            return await _conversorService.LibraAGramoAsync(valor);
+            return await _serviceManager.LibraAGramoAsync(valor);
 
         throw new InvalidOperationException("Combinación no válida");
     }

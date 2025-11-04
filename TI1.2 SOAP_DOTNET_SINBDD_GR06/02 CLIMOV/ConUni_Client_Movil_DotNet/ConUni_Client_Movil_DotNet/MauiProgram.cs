@@ -20,7 +20,13 @@ namespace ConUni_Client_Movil_DotNet
                 });
 
             // Registrar servicios
-            builder.Services.AddSingleton<ConversorService>();
+            builder.Services.AddSingleton<ServiceManager>();
+
+            // También puedes registrar los servicios individuales si quieres usarlos por separado
+            builder.Services.AddTransient<DotNetSoapService>();
+            builder.Services.AddTransient<JavaSoapService>();
+            builder.Services.AddTransient<DotNetRestService>();
+            builder.Services.AddTransient<JavaRestService>();
 
             // Registrar páginas
             builder.Services.AddTransient<LoginPage>();

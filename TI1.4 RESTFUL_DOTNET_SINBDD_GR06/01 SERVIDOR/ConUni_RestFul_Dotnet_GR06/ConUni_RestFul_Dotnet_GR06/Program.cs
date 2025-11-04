@@ -1,5 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Configurar URLs para escuchar en todas las interfaces
+builder.WebHost.UseUrls("https://0.0.0.0:7041", "http://0.0.0.0:5000");
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();

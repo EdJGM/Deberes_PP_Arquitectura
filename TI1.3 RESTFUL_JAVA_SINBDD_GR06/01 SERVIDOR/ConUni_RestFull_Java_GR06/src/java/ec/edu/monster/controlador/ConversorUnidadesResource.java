@@ -35,6 +35,27 @@ public class ConversorUnidadesResource {
     private ConversorLongitud conversorLong = new ConversorLongitud();
     private ConversorMasa conversorMasa = new ConversorMasa();
 
+    // ==================== HEALTH CHECK ====================
+    @GET
+    @Path("/health")
+    @Produces(MediaType.APPLICATION_JSON)
+    public java.util.Map<String, Object> healthCheck() {
+        java.util.Map<String, Object> response = new java.util.LinkedHashMap<>();
+
+        response.put("status", "OK");
+        response.put("timestamp", java.time.Instant.now().toString());
+        response.put("version", "1.0.0");
+
+        java.util.Map<String, Boolean> services = new java.util.LinkedHashMap<>();
+        services.put("temperatura", true);
+        services.put("longitud", true);
+        services.put("masa", true);
+        services.put("autenticacion", true);
+
+        response.put("servicesAvailable", services);
+
+        return response;
+    }   
     // ==================== AUTENTICACIÓN ====================
     @POST
     @Path("/login")

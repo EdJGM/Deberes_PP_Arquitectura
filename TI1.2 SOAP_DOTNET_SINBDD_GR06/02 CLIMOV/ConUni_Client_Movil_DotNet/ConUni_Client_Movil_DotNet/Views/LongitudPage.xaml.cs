@@ -4,12 +4,12 @@ namespace ConUni_Client_Movil_DotNet.Views;
 
 public partial class LongitudPage : ContentPage
 {
-    private readonly ConversorService _conversorService;
+    private readonly ServiceManager _serviceManager;
 
-    public LongitudPage(ConversorService conversorService)
+    public LongitudPage(ServiceManager serviceManager)
     {
         InitializeComponent();
-        _conversorService = conversorService;
+        _serviceManager = serviceManager;
 
         PickerOrigen.SelectedIndex = 0;  // Metro
         PickerDestino.SelectedIndex = 1; // Kilómetro
@@ -73,21 +73,21 @@ public partial class LongitudPage : ContentPage
 
         // Desde Metro
         if (origen == 0 && destino == 1) // Metro → Kilómetro
-            return await _conversorService.MetroAKilometroAsync(valor);
+            return await _serviceManager.MetroAKilometroAsync(valor);
         if (origen == 0 && destino == 2) // Metro → Milla
-            return await _conversorService.MetroAMillaAsync(valor);
+            return await _serviceManager.MetroAMillaAsync(valor);
 
         // Desde Kilómetro
         if (origen == 1 && destino == 0) // Kilómetro → Metro
-            return await _conversorService.KilometroAMetroAsync(valor);
+            return await _serviceManager.KilometroAMetroAsync(valor);
         if (origen == 1 && destino == 2) // Kilómetro → Milla
-            return await _conversorService.KilometroAMillaAsync(valor);
+            return await _serviceManager.KilometroAMillaAsync(valor);
 
         // Desde Milla
         if (origen == 2 && destino == 0) // Milla → Metro
-            return await _conversorService.MillaAMetroAsync(valor);
+            return await _serviceManager.MillaAMetroAsync(valor);
         if (origen == 2 && destino == 1) // Milla → Kilómetro
-            return await _conversorService.MillaAKilometroAsync(valor);
+            return await _serviceManager.MillaAKilometroAsync(valor);
 
         throw new InvalidOperationException("Combinación no válida");
     }

@@ -4,12 +4,12 @@ namespace ConUni_Client_Movil_DotNet.Views;
 
 public partial class TemperaturaPage : ContentPage
 {
-    private readonly ConversorService _conversorService;
+    private readonly ServiceManager _serviceManager;
 
-    public TemperaturaPage(ConversorService conversorService)
+    public TemperaturaPage(ServiceManager serviceManager)
     {
         InitializeComponent();
-        _conversorService = conversorService;
+        _serviceManager = serviceManager;
 
         // Seleccionar valores por defecto
         PickerOrigen.SelectedIndex = 0;  // Celsius
@@ -78,21 +78,21 @@ public partial class TemperaturaPage : ContentPage
 
         // Desde Celsius
         if (origen == 0 && destino == 1) // Celsius → Fahrenheit
-            return await _conversorService.CelsiusAFahrenheitAsync(valor);
+            return await _serviceManager.CelsiusAFahrenheitAsync(valor);
         if (origen == 0 && destino == 2) // Celsius → Kelvin
-            return await _conversorService.CelsiusAKelvinAsync(valor);
+            return await _serviceManager.CelsiusAKelvinAsync(valor);
 
         // Desde Fahrenheit
         if (origen == 1 && destino == 0) // Fahrenheit → Celsius
-            return await _conversorService.FahrenheitACelsiusAsync(valor);
+            return await _serviceManager.FahrenheitACelsiusAsync(valor);
         if (origen == 1 && destino == 2) // Fahrenheit → Kelvin
-            return await _conversorService.FahrenheitAKelvinAsync(valor);
+            return await _serviceManager.FahrenheitAKelvinAsync(valor);
 
         // Desde Kelvin
         if (origen == 2 && destino == 0) // Kelvin → Celsius
-            return await _conversorService.KelvinACelsiusAsync(valor);
+            return await _serviceManager.KelvinACelsiusAsync(valor);
         if (origen == 2 && destino == 1) // Kelvin → Fahrenheit
-            return await _conversorService.KelvinAFahrenheitAsync(valor);
+            return await _serviceManager.KelvinAFahrenheitAsync(valor);
 
         throw new InvalidOperationException("Combinación de unidades no válida");
     }

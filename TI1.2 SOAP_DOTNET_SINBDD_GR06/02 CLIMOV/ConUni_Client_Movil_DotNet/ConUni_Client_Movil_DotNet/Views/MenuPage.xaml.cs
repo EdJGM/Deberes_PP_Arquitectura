@@ -4,30 +4,30 @@ namespace ConUni_Client_Movil_DotNet.Views;
 
 public partial class MenuPage : ContentPage
 {
-    private readonly ConversorService _conversorService;
+    private readonly ServiceManager _serviceManager;
 
-    public MenuPage(ConversorService conversorService)
+    public MenuPage(ServiceManager serviceManager)
     {
         InitializeComponent();
-        _conversorService = conversorService;
+        _serviceManager = serviceManager;
 
         // Mostrar nombre de usuario
-        LabelUsuario.Text = _conversorService.UsuarioActual ?? "Usuario";
+        LabelUsuario.Text = _serviceManager.UsuarioActual ?? "Usuario";
     }
 
     private async void OnTemperaturaClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new TemperaturaPage(_conversorService));
+        await Navigation.PushAsync(new TemperaturaPage(_serviceManager));
     }
 
     private async void OnLongitudClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new LongitudPage(_conversorService));
+        await Navigation.PushAsync(new LongitudPage(_serviceManager));
     }
 
     private async void OnMasaClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MasaPage(_conversorService));
+        await Navigation.PushAsync(new MasaPage(_serviceManager));
     }
 
     private async void BtnCerrarSesion_Clicked(object sender, EventArgs e)
@@ -41,7 +41,7 @@ public partial class MenuPage : ContentPage
 
         if (confirmar)
         {
-            _conversorService.Logout();
+            _serviceManager.Logout();
             await Navigation.PopToRootAsync();
         }
     }
