@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConUni_Client_Escritorio_DotNet.ec.edu.monster.vistas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ConUni_Client_Escritorio_DotNet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }

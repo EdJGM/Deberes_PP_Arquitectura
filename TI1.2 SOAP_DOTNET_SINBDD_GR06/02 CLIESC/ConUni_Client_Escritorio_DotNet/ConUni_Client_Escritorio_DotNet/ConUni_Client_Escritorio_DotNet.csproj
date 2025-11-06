@@ -48,11 +48,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ec.edu.monster.vistas\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="ec.edu.monster.vistas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\MenuPrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\MenuPrincipalForm.Designer.cs">
+      <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\PanelLongitudForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\PanelLongitudForm.Designer.cs">
+      <DependentUpon>PanelLongitudForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\PanelMasaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\PanelMasaForm.Designer.cs">
+      <DependentUpon>PanelMasaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\PanelTemperaturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ec.edu.monster.vistas\PanelTemperaturaForm.Designer.cs">
+      <DependentUpon>PanelTemperaturaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,13 +93,8 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +143,12 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>ConUni_Client_Escritorio_DotNet_localhost_ConversorUnidadesWS</CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="images\img.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
