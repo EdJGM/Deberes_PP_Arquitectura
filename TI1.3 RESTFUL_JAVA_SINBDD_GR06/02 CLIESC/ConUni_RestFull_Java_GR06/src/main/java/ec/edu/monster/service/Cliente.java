@@ -18,7 +18,7 @@ import java.net.http.HttpResponse;
  */
 public class Cliente {
     
-    private static final String BASE_URL = "http://localhost:8080/ConUni_RestFull_Java_GR06/api/ConversorUnidades";
+    private static final String BASE_URL = "http://10.63.57.155:8080/ConUni_RestFull_Java_GR06/api/ConversorUnidades";
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final ObjectMapper mapper = new ObjectMapper();
     

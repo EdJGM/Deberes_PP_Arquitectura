@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConUni_Client_Movil_DotNet.Views.MenuPage"
+             Title="Conversor de Unidades"
+             BackgroundColor="#1a1a2e">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header con usuario -->
+            <Frame CornerRadius="15"
+                   Padding="20"
+                   BackgroundColor="#16213e"
+                   BorderColor="#0f3460"
+                   HasShadow="True">
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="👤"
+                           FontSize="32"
+                           VerticalOptions="Center"/>
+                    <VerticalStackLayout VerticalOptions="Center" Spacing="5">
+                        <Label Text="Bienvenido"
+                               TextColor="#94a3b8"
+                               FontSize="12"/>
+                        <Label x:Name="LabelUsuario"
+                               TextColor="White"
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                    <Button Text="Salir"
+                            Clicked="BtnCerrarSesion_Clicked"
+                            BackgroundColor="#dc2626"
+                            TextColor="White"
+                            CornerRadius="10"
+                            Padding="15,8"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Título -->
+            <Label Text="Seleccione una categoría"
+                   TextColor="White"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="0,10,0,0"/>
+
+            <!-- Tarjeta: Temperatura -->
+            <Frame CornerRadius="20"
+                   Padding="0"
+                   HasShadow="True"
+                   BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTemperaturaClicked"/>
+                </Frame.GestureRecognizers>
+
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#dc2626" Offset="0.0" />
+                        <GradientStop Color="#b91c1c" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Grid Padding="20" RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0"
+                           Text="🌡️"
+                           FontSize="48"
+                           HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="1"
+                           Text="TEMPERATURA"
+                           TextColor="White"
+                           FontSize="24"
+                           FontAttributes="Bold"/>
+
+                    <Label Grid.Row="2"
+                           Text="Celsius • Fahrenheit • Kelvin"
+                           TextColor="#fecaca"
+                           FontSize="14"/>
+                </Grid>
+            </Frame>
+
+            <!-- Tarjeta: Longitud -->
+            <Frame CornerRadius="20"
+                   Padding="0"
+                   HasShadow="True"
+                   BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLongitudClicked"/>
+                </Frame.GestureRecognizers>
+
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#2563eb" Offset="0.0" />
+                        <GradientStop Color="#1e40af" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Grid Padding="20" RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0"
+                           Text="📏"
+                           FontSize="48"
+                           HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="1"
+                           Text="LONGITUD"
+                           TextColor="White"
+                           FontSize="24"
+                           FontAttributes="Bold"/>
+
+                    <Label Grid.Row="2"
+                           Text="Metro • Kilómetro • Milla"
+                           TextColor="#bfdbfe"
+                           FontSize="14"/>
+                </Grid>
+            </Frame>
+
+            <!-- Tarjeta: Masa -->
+            <Frame CornerRadius="20"
+                   Padding="0"
+                   HasShadow="True"
+                   BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMasaClicked"/>
+                </Frame.GestureRecognizers>
+
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#16a34a" Offset="0.0" />
+                        <GradientStop Color="#15803d" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Grid Padding="20" RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0"
+                           Text="⚖️"
+                           FontSize="48"
+                           HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="1"
+                           Text="MASA"
+                           TextColor="White"
+                           FontSize="24"
+                           FontAttributes="Bold"/>
+
+                    <Label Grid.Row="2"
+                           Text="Kilogramo • Gramo • Libra"
+                           TextColor="#bbf7d0"
+                           FontSize="14"/>
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
