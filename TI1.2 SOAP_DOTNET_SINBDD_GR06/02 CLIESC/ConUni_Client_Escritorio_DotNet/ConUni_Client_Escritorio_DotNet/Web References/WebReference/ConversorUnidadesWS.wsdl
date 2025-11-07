@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ConversorUnidadesWS" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.63.57.155:61088/WebServices/ConversorUnidadesWS.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.63.57.155:61088/WebServices/ConversorUnidadesWS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.63.57.155:61088/WebServices/ConversorUnidadesWS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ConUni_Soap_Dotnet_GR06.Modelos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConversorUnidadesWS_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_CelsiusAFahrenheit_InputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusAFahrenheit" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_CelsiusAFahrenheit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusAFahrenheitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_FahrenheitACelsius_InputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitACelsius" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_FahrenheitACelsius_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitACelsiusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_CelsiusAKelvin_InputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusAKelvin" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_CelsiusAKelvin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CelsiusAKelvinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KelvinACelsius_InputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinACelsius" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KelvinACelsius_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinACelsiusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_FahrenheitAKelvin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitAKelvin" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_FahrenheitAKelvin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FahrenheitAKelvinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KelvinAFahrenheit_InputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinAFahrenheit" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KelvinAFahrenheit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KelvinAFahrenheitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MetroAKilometro_InputMessage">
+    <wsdl:part name="parameters" element="tns:MetroAKilometro" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MetroAKilometro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MetroAKilometroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilometroAMetro_InputMessage">
+    <wsdl:part name="parameters" element="tns:KilometroAMetro" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilometroAMetro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KilometroAMetroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MetroAMilla_InputMessage">
+    <wsdl:part name="parameters" element="tns:MetroAMilla" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MetroAMilla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MetroAMillaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MillaAMetro_InputMessage">
+    <wsdl:part name="parameters" element="tns:MillaAMetro" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MillaAMetro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MillaAMetroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilometroAMilla_InputMessage">
+    <wsdl:part name="parameters" element="tns:KilometroAMilla" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilometroAMilla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KilometroAMillaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MillaAKilometro_InputMessage">
+    <wsdl:part name="parameters" element="tns:MillaAKilometro" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_MillaAKilometro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MillaAKilometroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilogramoAGramo_InputMessage">
+    <wsdl:part name="parameters" element="tns:KilogramoAGramo" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilogramoAGramo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KilogramoAGramoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_GramoAKilogramo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GramoAKilogramo" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_GramoAKilogramo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GramoAKilogramoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilogramoALibra_InputMessage">
+    <wsdl:part name="parameters" element="tns:KilogramoALibra" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_KilogramoALibra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KilogramoALibraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_LibraAKilogramo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LibraAKilogramo" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_LibraAKilogramo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LibraAKilogramoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_GramoALibra_InputMessage">
+    <wsdl:part name="parameters" element="tns:GramoALibra" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_GramoALibra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GramoALibraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_LibraAGramo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LibraAGramo" />
+  </wsdl:message>
+  <wsdl:message name="IConversorUnidadesWS_LibraAGramo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LibraAGramoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IConversorUnidadesWS">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/Login" message="tns:IConversorUnidadesWS_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/LoginResponse" message="tns:IConversorUnidadesWS_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusAFahrenheit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/CelsiusAFahrenheit" message="tns:IConversorUnidadesWS_CelsiusAFahrenheit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/CelsiusAFahrenheitResponse" message="tns:IConversorUnidadesWS_CelsiusAFahrenheit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitACelsius">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/FahrenheitACelsius" message="tns:IConversorUnidadesWS_FahrenheitACelsius_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/FahrenheitACelsiusResponse" message="tns:IConversorUnidadesWS_FahrenheitACelsius_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusAKelvin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/CelsiusAKelvin" message="tns:IConversorUnidadesWS_CelsiusAKelvin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/CelsiusAKelvinResponse" message="tns:IConversorUnidadesWS_CelsiusAKelvin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KelvinACelsius">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KelvinACelsius" message="tns:IConversorUnidadesWS_KelvinACelsius_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KelvinACelsiusResponse" message="tns:IConversorUnidadesWS_KelvinACelsius_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitAKelvin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/FahrenheitAKelvin" message="tns:IConversorUnidadesWS_FahrenheitAKelvin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/FahrenheitAKelvinResponse" message="tns:IConversorUnidadesWS_FahrenheitAKelvin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KelvinAFahrenheit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KelvinAFahrenheit" message="tns:IConversorUnidadesWS_KelvinAFahrenheit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KelvinAFahrenheitResponse" message="tns:IConversorUnidadesWS_KelvinAFahrenheit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MetroAKilometro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MetroAKilometro" message="tns:IConversorUnidadesWS_MetroAKilometro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MetroAKilometroResponse" message="tns:IConversorUnidadesWS_MetroAKilometro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KilometroAMetro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilometroAMetro" message="tns:IConversorUnidadesWS_KilometroAMetro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilometroAMetroResponse" message="tns:IConversorUnidadesWS_KilometroAMetro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MetroAMilla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MetroAMilla" message="tns:IConversorUnidadesWS_MetroAMilla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MetroAMillaResponse" message="tns:IConversorUnidadesWS_MetroAMilla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MillaAMetro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MillaAMetro" message="tns:IConversorUnidadesWS_MillaAMetro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MillaAMetroResponse" message="tns:IConversorUnidadesWS_MillaAMetro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KilometroAMilla">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilometroAMilla" message="tns:IConversorUnidadesWS_KilometroAMilla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilometroAMillaResponse" message="tns:IConversorUnidadesWS_KilometroAMilla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MillaAKilometro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MillaAKilometro" message="tns:IConversorUnidadesWS_MillaAKilometro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/MillaAKilometroResponse" message="tns:IConversorUnidadesWS_MillaAKilometro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KilogramoAGramo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilogramoAGramo" message="tns:IConversorUnidadesWS_KilogramoAGramo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilogramoAGramoResponse" message="tns:IConversorUnidadesWS_KilogramoAGramo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GramoAKilogramo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/GramoAKilogramo" message="tns:IConversorUnidadesWS_GramoAKilogramo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/GramoAKilogramoResponse" message="tns:IConversorUnidadesWS_GramoAKilogramo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KilogramoALibra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilogramoALibra" message="tns:IConversorUnidadesWS_KilogramoALibra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/KilogramoALibraResponse" message="tns:IConversorUnidadesWS_KilogramoALibra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LibraAKilogramo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/LibraAKilogramo" message="tns:IConversorUnidadesWS_LibraAKilogramo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/LibraAKilogramoResponse" message="tns:IConversorUnidadesWS_LibraAKilogramo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GramoALibra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/GramoALibra" message="tns:IConversorUnidadesWS_GramoALibra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/GramoALibraResponse" message="tns:IConversorUnidadesWS_GramoALibra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LibraAGramo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConversorUnidadesWS/LibraAGramo" message="tns:IConversorUnidadesWS_LibraAGramo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConversorUnidadesWS/LibraAGramoResponse" message="tns:IConversorUnidadesWS_LibraAGramo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConversorUnidadesWS" type="tns:IConversorUnidadesWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusAFahrenheit">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/CelsiusAFahrenheit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitACelsius">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/FahrenheitACelsius" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CelsiusAKelvin">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/CelsiusAKelvin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KelvinACelsius">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/KelvinACelsius" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FahrenheitAKelvin">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/FahrenheitAKelvin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KelvinAFahrenheit">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/KelvinAFahrenheit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MetroAKilometro">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/MetroAKilometro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KilometroAMetro">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/KilometroAMetro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MetroAMilla">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/MetroAMilla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MillaAMetro">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/MillaAMetro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KilometroAMilla">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/KilometroAMilla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MillaAKilometro">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/MillaAKilometro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KilogramoAGramo">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/KilogramoAGramo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GramoAKilogramo">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/GramoAKilogramo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KilogramoALibra">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/KilogramoALibra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LibraAKilogramo">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/LibraAKilogramo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GramoALibra">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/GramoALibra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LibraAGramo">
+      <soap:operation soapAction="http://tempuri.org/IConversorUnidadesWS/LibraAGramo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConversorUnidadesWS">
+    <wsdl:port name="BasicHttpBinding_IConversorUnidadesWS" binding="tns:BasicHttpBinding_IConversorUnidadesWS">
+      <soap:address location="http://10.63.57.155:61088/WebServices/ConversorUnidadesWS.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
