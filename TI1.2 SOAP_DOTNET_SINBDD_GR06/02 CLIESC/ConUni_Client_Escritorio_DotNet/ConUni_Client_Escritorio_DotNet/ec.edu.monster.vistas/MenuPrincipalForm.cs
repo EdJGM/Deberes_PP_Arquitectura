@@ -161,7 +161,7 @@ namespace ConUni_Client_Escritorio_DotNet.ec.edu.monster.vistas
             var iconLabel = new Label
             {
                 Text = emoji,
-                Font = new Font("Segoe UI Emoji", 64, FontStyle.Regular),
+                Font = new Font("Segoe UI Emoji", 40, FontStyle.Regular),
                 AutoSize = true,
                 Location = new Point(75, 30)
             };
@@ -169,7 +169,7 @@ namespace ConUni_Client_Escritorio_DotNet.ec.edu.monster.vistas
             var lblTitulo = new Label
             {
                 Text = titulo,
-                Font = new Font("Arial", 20, FontStyle.Bold),
+                Font = new Font("Arial", 15, FontStyle.Bold),
                 ForeColor = TEXT_PRIMARY,
                 AutoSize = true,
                 Location = new Point(30, 130)

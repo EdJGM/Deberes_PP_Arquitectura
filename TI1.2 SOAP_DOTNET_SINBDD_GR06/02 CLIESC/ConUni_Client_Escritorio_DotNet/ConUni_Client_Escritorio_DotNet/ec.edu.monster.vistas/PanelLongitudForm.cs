@@ -92,10 +92,10 @@ namespace ConUni_Client_Escritorio_DotNet.ec.edu.monster.vistas
             var lblTitulo = new Label
             {
                 Text = "CONVERSIÓN DE LONGITUD",
-                Font = new Font("Arial", 24, FontStyle.Bold),
+                Font = new Font("Arial", 15, FontStyle.Bold),
                 ForeColor = Color.White,
                 AutoSize = true,
-                Location = new Point(100, 15)
+                Location = new Point(150, 15)
             };
 
             var lblDesc = new Label
@@ -104,7 +104,7 @@ namespace ConUni_Client_Escritorio_DotNet.ec.edu.monster.vistas
                 Font = new Font("Arial", 14, FontStyle.Regular),
                 ForeColor = Color.White,
                 AutoSize = true,
-                Location = new Point(100, 50)
+                Location = new Point(150, 50)
             };
 
             var lblUsuario = new Label
@@ -132,7 +132,7 @@ namespace ConUni_Client_Escritorio_DotNet.ec.edu.monster.vistas
             {
                 BackColor = BG_CARD,
                 BorderStyle = BorderStyle.FixedSingle,
-                Location = new Point(140, 30),
+                Location = new Point(140, 100),
                 Size = new Size(520, 600)
             };
 
