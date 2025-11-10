@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConUni_Client_Movil_DotNet.Views.LoginPage"
+             BackgroundColor="#1a1a2e"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" 
+                           Spacing="20" 
+                           VerticalOptions="Center">
+
+            <!-- Logo/Icono -->
+            <Frame CornerRadius="100"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   Padding="0"
+                   HasShadow="True"
+                   HorizontalOptions="Center"
+                   BorderColor="#16213e">
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#0f3460" Offset="0.0" />
+                        <GradientStop Color="#16213e" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Label Text="🔐"
+                       FontSize="60"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+            </Frame>
+
+            <!-- Título -->
+            <Label Text="CONVERSOR"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Sistema de Conversión de Unidades"
+                   FontSize="14"
+                   TextColor="#94a3b8"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,-10,0,10"/>
+
+            <!-- Frame de imagen -->
+            <Image Source="img.png"
+                   WidthRequest="300"
+                   HeightRequest="200"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,0"/>
+            
+            <!-- Frame del formulario -->
+            <Frame CornerRadius="20"
+                   Padding="20"
+                   HasShadow="True"
+                   BorderColor="#16213e"
+                   BackgroundColor="#16213e">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Usuario -->
+                    <Label Text="Usuario"
+                           TextColor="#94a3b8"
+                           FontSize="14"/>
+
+                    <Frame Padding="0"
+                           CornerRadius="10"
+                           BorderColor="#0f3460"
+                           BackgroundColor="#0f3460"
+                           HasShadow="False">
+                        <Entry x:Name="EntryUsuario"
+                               Placeholder="Ingrese su usuario"
+                               PlaceholderColor="#64748b"
+                               TextColor="White"
+                               BackgroundColor="Transparent"
+                               Margin="10,0"/>
+                    </Frame>
+
+                    <!-- Contraseña -->
+                    <Label Text="Contraseña"
+                           TextColor="#94a3b8"
+                           FontSize="14"
+                           Margin="0,10,0,0"/>
+
+                    <Frame Padding="0"
+                           CornerRadius="10"
+                           BorderColor="#0f3460"
+                           BackgroundColor="#0f3460"
+                           HasShadow="False">
+                        <Entry x:Name="EntryPassword"
+                               Placeholder="Ingrese su contraseña"
+                               PlaceholderColor="#64748b"
+                               TextColor="White"
+                               IsPassword="True"
+                               BackgroundColor="Transparent"
+                               Margin="10,0"/>
+                    </Frame>
+
+                    <!-- Credenciales de prueba -->
+                    <Frame CornerRadius="10"
+                           Padding="10"
+                           BorderColor="#065f46"
+                           BackgroundColor="#064e3b"
+                           Margin="0,10,0,0">
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="💡 Credenciales por defecto:"
+                                   TextColor="#6ee7b7"
+                                   FontSize="12"/>
+                            <Label Text="Usuario: MONSTER"
+                                   TextColor="#a7f3d0"
+                                   FontSize="11"/>
+                            <Label Text="Contraseña: MONSTER9"
+                                   TextColor="#a7f3d0"
+                                   FontSize="11"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Mensaje de error -->
+                    <Label x:Name="LabelError"
+                           TextColor="#ef4444"
+                           FontSize="12"
+                           IsVisible="False"
+                           HorizontalTextAlignment="Center"/>
+
+                    <!-- Botón Login -->
+                    <Button x:Name="BtnLogin"
+                            Text="INICIAR SESIÓN"
+                            Clicked="BtnLogin_Clicked"
+                            Margin="0,20,0,0"
+                            HeightRequest="50"
+                            CornerRadius="10"
+                            FontAttributes="Bold">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#e94560" Offset="0.0" />
+                                <GradientStop Color="#c2185b" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+
+                    <!-- Indicador de carga -->
+                    <ActivityIndicator x:Name="LoadingIndicator"
+                                     IsRunning="False"
+                                     IsVisible="False"
+                                     Color="#e94560"
+                                     HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Footer -->
+            <Label Text="v1.0 - Grupo 06"
+                   TextColor="#64748b"
+                   FontSize="12"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,0"/>
+
+
+            <!-- Selector de Servicio (agregar antes del botón Login) -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="8" 
+                   HasShadow="True" 
+                   Margin="20,10,20,0">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="🔧 Tipo de Servicio:" 
+                    FontSize="14" 
+                    FontAttributes="Bold"
+                    TextColor="#2E86AB"/>
+                    <Picker x:Name="PickerTipoServicio"
+                    FontSize="16"
+                    BackgroundColor="#F8F9FA"
+                    TextColor="#333"
+                    SelectedIndexChanged="PickerTipoServicio_SelectedIndexChanged">
+                        <Picker.Items>
+                        <x:String>🔷 .NET SOAP</x:String>
+                        <x:String>☕ Java SOAP</x:String>
+                        <x:String>🌐 .NET REST</x:String>
+                        <x:String>☕ Java REST</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label x:Name="LabelEstadoServicio" 
+                    Text="✅ Servicio por defecto seleccionado" 
+                    FontSize="12"
+                    TextColor="#28A745"
+                    IsVisible="True"/>
+
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

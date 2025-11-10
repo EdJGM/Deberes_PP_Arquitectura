@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: system-ui, -apple-system, sans-serif;
+
+  /* Colores Base */
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-card: #334155;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-border-color: #475569;
+
+  /* Colores por Categoría */
+  --color-temperatura: #ef4444;
+  --color-temperatura-hover: #dc2626;
+
+  --color-longitud: #3b82f6;
+  --color-longitud-hover: #2563eb;
+
+  --color-masa: #10b981;
+  --color-masa-hover: #059669;
+
+  --color-login: #8b5cf6;
+  --color-login-hover: #7c3aed;
+
+  /* Colores de Estado */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+
+  /* Radius */
+  --radius: 0.75rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border-color);
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

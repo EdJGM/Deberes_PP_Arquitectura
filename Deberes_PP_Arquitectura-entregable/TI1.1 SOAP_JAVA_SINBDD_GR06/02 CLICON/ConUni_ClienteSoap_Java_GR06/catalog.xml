@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS?wsdl" uri="xml-resources/web-service-references/ConversorUnidadesWS_1/wsdl/localhost_8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS.wsdl"/>
+    <system systemId="http://localhost:8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS?xsd=1" uri="xml-resources/web-service-references/ConversorUnidadesWS_1/wsdl/localhost_8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS.xsd_1.xsd"/>
+    <system systemId="http://10.63.57.155:8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS?wsdl" uri="xml-resources/web-service-references/ConversorUnidadesWS_2/wsdl/10.63.57.155_8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS.wsdl"/>
+    <system systemId="http://10.63.57.155:8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS?xsd=1" uri="xml-resources/web-service-references/ConversorUnidadesWS_2/wsdl/10.63.57.155_8080/ConUni_Soap_Java_GR06/ConversorUnidadesWS.xsd_1.xsd"/>
+</catalog>
